@@ -1,0 +1,18 @@
+For communication in ppc TCP
+
+
+#include<stdio.h>
+void main()
+{
+   fprintf(stderr,"In TCP1 \n");
+    char commarea1[10];
+   EXEC CICS ADDRESS COMMAREA(commarea1);
+   fprintf(stderr,"In TCP1 Region %s \n",commarea1);
+   EXEC CICS LINK PROGRAM("PROG") SYSID("CD01");
+
+   /* strcpy(commarea1,"jithesh");
+   EXEC CICS SEND TEXT FROM(commarea1) LENGTH(10); */
+   fprintf(stderr,"Completed Program \n");
+   return;
+
+}
