@@ -1,0 +1,18 @@
+you can change the hostname by following methods
+
+hostname machinename.
+
+but it will change once you change it differently
+
+hostname can be changed by changing hostname value in
+vi /etc/sysconfig/network
+
+NETWORKING_IPV6=no
+
+HOSTNAME=machinename 
+
+NETWORKING=yes
+
+GATEWAY=
+
+change that service network restart
